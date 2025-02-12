@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- Heading -->
+    <p class="h1 text-center p-5">Expense Tracker</p>
+
+    <!-- Forms Input Add -->
+    <p class="h3 text-center m-2">Add/Update Expense</p>
+    <form action="#" method="post">
+        <div class="row m-5">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Enter Expense Name" id="expense_name">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" placeholder="Enter Amount" id="amount">
+          </div>
+          <div class="col">
+            <select class="form-control" id="category">
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Intenet">Internet</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" placeholder="Enter Date" id="date">
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary" id="add_button" onclick="addExpense()">Add Expense</button>
+            <button type="button" class="btn btn-secondary" id="update_button" onclick="updateExpense()" disabled>Update Expense</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Add Expense -->
+      <table class="table table-bordered text-center" id="myTable">
+        <thead>
+          <tr>
+            <th scope="col" style="display: none;">Serial No.</th>
+            <th scope="col">Expense Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Category</th>
+            <th scope="col">Date</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+      </table>
+
+      <!-- Show Total Amount -->
+      <div class="m-5">
+        <div class="d-flex flex-row justify-content-end">
+          <h5 class="fw-bolder">Total:</h5>
+          <p id="show_amount_sum" class="fs-5"></p>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
